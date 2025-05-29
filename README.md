@@ -92,7 +92,7 @@ pip install -r requirements.txt
 ### 결과
 ![image](https://github.com/user-attachments/assets/3d148796-d18b-47bd-bf95-42490408d457)
 
-![link](https://drive.google.com/file/d/1katt9le45K35n1GL8ZQocqRJiJlqNWFA/view?usp=sharing)
+[biref_torch2onnx.ipynb](https://drive.google.com/file/d/1katt9le45K35n1GL8ZQocqRJiJlqNWFA/view?usp=sharing)
 
 
 
