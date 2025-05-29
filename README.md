@@ -1,4 +1,4 @@
-
+<h1 align="center">Bilateral Reference for High-Resolution Dichotomous Image Segmentation</h1>
 
 ## Usage for Fine-tuning ~ torch2onnx
 
