@@ -40,10 +40,10 @@ pip install -r requirements.txt
 
 2. **Change an existing task to your custom one**: replace all `'General'` (with single quotes) in the whole project with `your custom task name` as the screenshot of vscode given below shows:<img src="https://drive.google.com/thumbnail?id=1J6gzTmrVnQsmtt3hi6ch3ZrH7Op9PKSB&sz=w400" />
 
-위의 사진과 같이 공식 repository를 clone한 경우 `'General'`을  `your custom task name`으로 변경해주면 됩니다.
+> >위의 사진과 같이 공식 repository를 clone한 경우 `'General'`을  `your custom task name`으로 변경해주면 됩니다.
 
-> 현재 수정한 config.py를 쓸 경우 이 부분은 skip해도 됩니다. 대신 반드시, 1번에서의 예시 사진과 똑같이 설정한 폴더 구조와 폴더 명을 따라야합니다. task 명 혹은 dataset 폴더명을 바꾸게 될 경우 아래 config.py에 대응되는 부분을 수정하면 됩니다. 
-> ![image](https://github.com/user-attachments/assets/5f5b4801-3b7c-4601-a648-b7a296d5d92b)
+> >현재 수정한 config.py를 쓸 경우 이 부분은 skip해도 됩니다. 대신 반드시, 1번에서의 예시 사진과 똑같이 설정한 폴더 구조와 폴더 명을 따라야합니다. task 명 혹은 dataset 폴더명을 바꾸게 될 경우 아래 config.py에 대응되는 부분을 수정하면 됩니다. 
+> > ![image](https://github.com/user-attachments/assets/5f5b4801-3b7c-4601-a648-b7a296d5d92b)
 
 
 
