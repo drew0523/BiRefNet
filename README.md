@@ -17,16 +17,6 @@ conda create -n birefnet python=3.10 -y && conda activate birefnet
 pip install -r requirements.txt
 ```
 
-## Run
-
-```shell
-# Train & Test & Evaluation
-./train_test.sh RUN_NAME GPU_NUMBERS_FOR_TRAINING GPU_NUMBERS_FOR_TEST
-# Example: ./train_test.sh tmp-proj 0,1,2,3,4,5,6,7 0
-
-# See train.sh / test.sh for only training / test-evaluation.
-# After the evaluation, run `gen_best_ep.py` to select the best ckpt from a specific metric (you choose it from Sm, wFm, HCE (DIS only)).
-```
 
 ### :pen: Fine-tuning on Custom Data
 
@@ -76,8 +66,20 @@ pip install -r requirements.txt
 
 
 
-5. **Use existing weights**: if you want to use some existing weights to fine-tune that model, please refer to the `resume` argument in `train.py`. Attention: the epoch of training continues from the epochs the weights file name indicates (e.g., `244` in `BiRefNet-general-epoch_244.pth`), instead of `1`. So, if you want to fine-tune `50` more epochs, please specify the epochs as `294`. `\#Epochs, \#last epochs for validation, and validation step` are set in `train.sh`.
-6. Good luck to your training :) If you still have questions, feel free to leave issues (recommended way) or contact me.
+4. **Use existing weights**: pretrained weight를 가지고 fine-tuning 을 진행하기 위해 train.sh 파일을 수정합니다.
+  아래 사진과 같이 weight에 대한 path를 지정합니다. 이때 현재 weight의 최종 학습 epoch이 100이고 추가적으로 10 epoch을 학습시키고 싶을 경우 `100 + 10` 과 같이 입력해줍니다.
+   `\#Epochs, \#last epochs for validation, and validation step` are set in `train.sh`.
+   ![image](https://github.com/user-attachments/assets/57d321e8-2d8f-4e08-8efc-8b10d34e27df)
+
+ 
+## Run
+> 학습을 위한 setting은 마무리되어 train 및 test까지 실행합니다. 아래 쉘스크립트를 실행하면 됩니다.
+```shell
+# Train & Test & Evaluation
+./train_test.sh RUN_NAME GPU_NUMBERS_FOR_TRAINING GPU_NUMBERS_FOR_TEST
+```
+### Example: ![image](https://github.com/user-attachments/assets/b18baeb0-2311-4ea1-9e9b-564bf45fe369)
+> 이 경우 gpu 4, 5를 가지고 학습을 진행 후 4로 test를 진행합니다. 이후 ckpt/z_no-freeze/ 폴더에 학습 완료된 model이 저장됩니다.
 
 
 
