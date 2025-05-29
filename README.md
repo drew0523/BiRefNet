@@ -79,7 +79,8 @@ pip install -r requirements.txt
 ./train_test.sh RUN_NAME GPU_NUMBERS_FOR_TRAINING GPU_NUMBERS_FOR_TEST
 ```
 ### Example: ![image](https://github.com/user-attachments/assets/b18baeb0-2311-4ea1-9e9b-564bf45fe369)
-> 이 경우 gpu 4, 5를 가지고 학습을 진행 후 4로 test를 진행합니다. 이후 ckpt/z_no-freeze/ 폴더에 학습 완료된 model이 저장됩니다. ![image](https://github.com/user-attachments/assets/fa59b3e5-762d-46e3-8258-05637008f67c)
+> 이 경우 gpu 4, 5를 가지고 학습을 진행 후 4로 test를 진행합니다. 이후 ckpt/z_no-freeze/ 폴더에 학습 완료된 model이 저장됩니다.
+> ![image](https://github.com/user-attachments/assets/fa59b3e5-762d-46e3-8258-05637008f67c)
 
 
 
