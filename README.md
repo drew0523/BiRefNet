@@ -1,16 +1,13 @@
 <h1 align="center">Bilateral Reference for High-Resolution Dichotomous Image Segmentation</h1>
 
-<div align='center'>
-    <a href='https://scholar.google.com/citations?user=TZRzWOsAAAAJ' target='_blank'><strong>Peng Zheng</strong></a><sup> 1,4,5,6</sup>,&thinsp;
-    <a href='https://scholar.google.com/citations?user=0uPb8MMAAAAJ' target='_blank'><strong>Dehong Gao</strong></a><sup> 2</sup>,&thinsp;
-    <a href='https://scholar.google.com/citations?user=kakwJ5QAAAAJ' target='_blank'><strong>Deng-Ping Fan</strong></a><sup> 1*</sup>,&thinsp;
-    <a href='https://scholar.google.com/citations?user=9cMQrVsAAAAJ' target='_blank'><strong>Li Liu</strong></a><sup> 3</sup>,&thinsp;
-    <a href='https://scholar.google.com/citations?user=qQP6WXIAAAAJ' target='_blank'><strong>Jorma Laaksonen</strong></a><sup> 4</sup>,&thinsp;
-    <a href='https://scholar.google.com/citations?user=pw_0Z_UAAAAJ' target='_blank'><strong>Wanli Ouyang</strong></a><sup> 5</sup>,&thinsp;
-    <a href='https://scholar.google.com/citations?user=stFCYOAAAAAJ' target='_blank'><strong>Nicu Sebe</strong></a><sup> 6</sup>
-</div>
+## Usage for Fine-tuning ~ torch2onnx
 
-## Usage
+#### Clone Repository
+
+```shell
+git clone https://github.com/ZhengPeng7/BiRefNet.git
+cd BiRefNet
+```
 
 #### Environment Setup
 
@@ -33,21 +30,26 @@ pip install -r requirements.txt
 
 ### :pen: Fine-tuning on Custom Data
 
-> A video of the tutorial on BiRefNet fine-tuning has been released on my YouTube channel ⬇️
+> A video of the tutorial on BiRefNet fine-tuning (config file 설정 영상: 사진 클릭) ⬇️
 
 [![BiRefNet Fine-tuning Tutorial](https://img.youtube.com/vi/FwGT_0V9E-k/0.jpg)](https://youtu.be/FwGT_0V9E-k)
 
 > Suppose you have some custom data, fine-tuning on it tends to bring improvement.
 
-1. **Pre-requisites**: you have put your datasets in the path `${data_root_dir}/TASK_NAME/DATASET_NAME`. For example, `${data_root_dir}/DIS5K/DIS-TR` and `${data_root_dir}/General/TR-HRSOD`, where `im` and `gt` are both in each dataset folder.
-2. **Change an existing task to your custom one**: replace all `'General'` (with single quotes) in the whole project with `your custom task name` as the screenshot of vscode given below shows:<img src="https://drive.google.com/thumbnail?id=1J6gzTmrVnQsmtt3hi6ch3ZrH7Op9PKSB&sz=w400" />
-3. **Adapt settings**:
+1. **Pre-requisites**: 커스텀 데이터셋을 다음의 경로에 저장: `${data_root_dir}/TASK_NAME/DATASET_NAME`. 예시: `${data_root_dir}/custom/test_custom` 또는 `${data_root_dir}/General/train_custom`. 그리고 각 dataset 폴더에는 `im` 와 `gt` 에 해당하는 데이터셋 폴더를 가져야 함.
+
+#### 예시
+![image](https://github.com/user-attachments/assets/f22b4c14-5a33-4c97-aeae-b40542b83e24)
+
+
+3. **Change an existing task to your custom one**: replace all `'General'` (with single quotes) in the whole project with `your custom task name` as the screenshot of vscode given below shows:<img src="https://drive.google.com/thumbnail?id=1J6gzTmrVnQsmtt3hi6ch3ZrH7Op9PKSB&sz=w400" />
+4. **Adapt settings**:
    + `sys_home_dir`: path to the root folder, which contains codes / datasets / weights / ... -- project folder / data folder / backbone weights folder are `${sys_home_dir}/codes/dis/BiRefNet / ${sys_home_dir}/datasets/dis/General / ${sys_home_dir}/weights/cv/swin_xxx`, respectively.
    + `testsets`: your validation set.
    + `training_set`: your training set.
    + `lambdas_pix_last`: adapt the weights of different losses if you want, especially for the difference between segmentation (classification task) and matting (regression task).
-4. **Use existing weights**: if you want to use some existing weights to fine-tune that model, please refer to the `resume` argument in `train.py`. Attention: the epoch of training continues from the epochs the weights file name indicates (e.g., `244` in `BiRefNet-general-epoch_244.pth`), instead of `1`. So, if you want to fine-tune `50` more epochs, please specify the epochs as `294`. `\#Epochs, \#last epochs for validation, and validation step` are set in `train.sh`.
-5. Good luck to your training :) If you still have questions, feel free to leave issues (recommended way) or contact me.
+5. **Use existing weights**: if you want to use some existing weights to fine-tune that model, please refer to the `resume` argument in `train.py`. Attention: the epoch of training continues from the epochs the weights file name indicates (e.g., `244` in `BiRefNet-general-epoch_244.pth`), instead of `1`. So, if you want to fine-tune `50` more epochs, please specify the epochs as `294`. `\#Epochs, \#last epochs for validation, and validation step` are set in `train.sh`.
+6. Good luck to your training :) If you still have questions, feel free to leave issues (recommended way) or contact me.
 
 
 
