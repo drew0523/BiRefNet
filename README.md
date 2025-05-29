@@ -1,4 +1,4 @@
-<h1 align="center">Bilateral Reference for High-Resolution Dichotomous Image Segmentation</h1>
+![image](https://github.com/user-attachments/assets/8130aead-288f-4698-84d2-e10eb47e9eff)<h1 align="center">Bilateral Reference for High-Resolution Dichotomous Image Segmentation</h1>
 
 ## Usage for Fine-tuning ~ torch2onnx
 
@@ -94,6 +94,22 @@ pip install -r requirements.txt
 
 [biref_torch2onnx.ipynb](https://drive.google.com/file/d/1katt9le45K35n1GL8ZQocqRJiJlqNWFA/view?usp=sharing)
 
+#### python file version
+> 1. 앞선 사항과 마찬가지로 깔끔한 변환 환경을 위해 새롭게 clone을 진행하고 conda, requirement 등 environment를 setting합니다.
+> 2. 추가적으로 export 하기 위해 필요한 사항들을 설치합니다.
+> ```shell
+> pip install -q gdown onnx onnxscript onnxruntime-gpu==1.18.1
+> ```
+> 3. 이후 BiRefNet 폴더에 [export_onnx.py](https://drive.google.com/file/d/1FB_kSi9u_4pXGtcQNUAtEeWzFkpGrTU4/view?usp=sharing) 파일을 업로드합니다.
+> ![image](https://github.com/user-attachments/assets/82841425-a7b9-4c25-a4c9-d788b0ebc8b0)
+> 4. 이후 현재 위치에서 다음을 실행합니다.
+> ```shell
+> python3 export_onnx.py --pt_path "{pth 파일 경로}" --onnx_save_path "{onnx 저장경로}" --device {사용할 gpu/cpu}
+> ```
+> ![image](https://github.com/user-attachments/assets/faa20cf3-d46c-4cdc-b9e0-aa913552d77e)
+
+> 변환 완료
+> ![image](https://github.com/user-attachments/assets/aa8ac210-dc93-4f16-bf48-9557231d753c)
 
 
 
