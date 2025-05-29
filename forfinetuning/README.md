@@ -1,4 +1,4 @@
-# BiRefNet 사용자 정의 데이터 기반 Fine-tuningg 및 Onnx 변환 가이드
+# BiRefNet 사용자 정의 데이터 기반 Fine-tuning 및 Onnx 변환 가이드
 
 ## 1. Clone Repository
 
@@ -107,7 +107,7 @@ pip install -r requirements.txt
 ## 5. Pytorch -> Onnx 변환
 - Onnx로 변환을 수행하기 위해서는 최소 VRAM 18~20GB가 요구됩니다.
 
-- 1. 새로운 디렉터리에서 새로 Clone을 하고 환경 세팅 후 다음 패키지를 설치합니다.
+- 1. 새로운 디렉터리에서 새로 Clone을 합니다. 이후 앞서 설명한 방식대로 conda 가상환경을 구축합니다.(이전에 위에서 conda 가상환경을 구축하였다면 해당 가상환경을 활성화하시면 됩니다.) 이후 다음 패키지를 설치합니다.
 
   ```bash
   pip install -q gdown onnx onnxscript onnxruntime-gpu==1.18.1
