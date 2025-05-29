@@ -86,9 +86,10 @@ pip install -r requirements.txt
 
 ### :pen: torch2onnx
 > 해당 ipynb를 통해 변환을 수행하기 위해서는 최소 vram 20GB가 요구됩니다. (Colab 무료 불가)
-> 또한, 해당 과정을 수정한 config.py 를 사용할 경우 알 수 없는 에러가 발생하여 새로운 디렉토리에 다시 git clone을 후 진행하였습니다. 아래의 ipynb를 새로운 디렉토리에서 실행하면 이상 없이 작동합니다.
 
-###결과
+> 또한, 해당 과정을 수정한 config.py 를 사용할 경우 알 수 없는 에러가 발생하여 `새로운 디렉토리에 다시 git clone`을 후 진행하였습니다. 아래의 ipynb를 새로운 디렉토리에서 실행하면 이상 없이 작동합니다.
+
+### 결과
 ![image](https://github.com/user-attachments/assets/3d148796-d18b-47bd-bf95-42490408d457)
 
 ![biref_torch2onnx](https://drive.google.com/file/d/1katt9le45K35n1GL8ZQocqRJiJlqNWFA/view?usp=sharing)
