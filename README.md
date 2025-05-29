@@ -62,13 +62,16 @@ pip install -r requirements.txt
    + `data_root_dir': dataset이 존재하는 root 디렉토리
    ![image](https://github.com/user-attachments/assets/ab7ddcbf-9e9f-40ec-b000-92fdbc8de88f)
 
-> 또한, 현재 task는 `matting` task로 해당 task에 맞게 loss function을 config.py에서 설정한 상황입니다. task를 `segmentation`으로 변경할 경우 이 부분 수정하면 됩니다. 이외의 learning rate 등도 추가적으로 수정이 필요할 경우 config.py에서 수정 진행하면 됩니다.
-    + `lambdas_pix_last`: adapt the weights of different losses if you want, especially for the difference between segmentation (classification task) and matting (regression task).
-> ![image](https://github.com/user-attachments/assets/3dff2140-411e-47b3-ae1b-d69825fa1672)
+   + 또한, 현재 task는 `matting` task로 해당 task에 맞게 loss function을 config.py에서 설정한 상황입니다. task를 `segmentation`으로 변경할 경우 이 부분 수정하면 됩니다. 이외의 learning rate 등도 추가적으로 수정이 필요할 경우 config.py에서 수정 진행하면 됩니다.
+
+   + `lambdas_pix_last`: adapt the weights of different losses if you want, especially for the difference between segmentation (classification task) and matting (regression task).
+     
+      ![image](https://github.com/user-attachments/assets/3dff2140-411e-47b3-ae1b-d69825fa1672)
 
    + `testsets`: your test set.
    + `training_set`: your training set.
    + `validation_set`: your validation set.
+     
      ![image](https://github.com/user-attachments/assets/4cd0f4e9-6594-4a4b-9be9-7f944958d56b)
 
 
