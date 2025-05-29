@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/8130aead-288f-4698-84d2-e10eb47e9eff)<h1 align="center">Bilateral Reference for High-Resolution Dichotomous Image Segmentation</h1>
+
 
 ## Usage for Fine-tuning ~ torch2onnx
 
