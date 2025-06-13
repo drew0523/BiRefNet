@@ -79,7 +79,8 @@ pip install -r requirements.txt
 # Train & Test & Evaluation
 ./train_test.sh RUN_NAME GPU_NUMBERS_FOR_TRAINING GPU_NUMBERS_FOR_TEST
 ```
-### Example: ![image](https://github.com/user-attachments/assets/b18baeb0-2311-4ea1-9e9b-564bf45fe369)
+### Example: ![image](https://github.com/user-attachments/assets/c3ea043a-5201-4ac4-a342-f1790ccf326e)
+
 > 이 경우 gpu 4, 5를 가지고 학습을 진행 후 4로 test를 진행합니다. 이후 ckpt/z_no-freeze/ 폴더에 학습 완료된 model이 저장됩니다.
 
 > ![image](https://github.com/user-attachments/assets/fa59b3e5-762d-46e3-8258-05637008f67c)
@@ -103,15 +104,17 @@ pip install -r requirements.txt
 > pip install -q gdown onnx onnxscript onnxruntime-gpu==1.18.1
 > ```
 > 3. 이후 BiRefNet 폴더에 [export_onnx.py](https://drive.google.com/file/d/1FB_kSi9u_4pXGtcQNUAtEeWzFkpGrTU4/view?usp=sharing) 파일을 업로드합니다.
-> ![image](https://github.com/user-attachments/assets/82841425-a7b9-4c25-a4c9-d788b0ebc8b0)
+> ![image](https://github.com/user-attachments/assets/f65fed09-efef-487a-af77-4524dec73653)
+
 > 4. 이후 현재 위치에서 다음을 실행합니다.
 > ```shell
 > python3 export_onnx.py --pt_path "{pth 파일 경로}" --onnx_save_path "{onnx 저장경로}" --device {사용할 gpu/cpu}
 > ```
-> ![image](https://github.com/user-attachments/assets/faa20cf3-d46c-4cdc-b9e0-aa913552d77e)
+> ![image](https://github.com/user-attachments/assets/c356f288-04cd-4cba-937e-b5b504c06743)
+
 
 > 변환 완료
-> ![image](https://github.com/user-attachments/assets/aa8ac210-dc93-4f16-bf48-9557231d753c)
+> ![image](https://github.com/user-attachments/assets/a17c8fbf-7175-4323-ba30-636a4b9a5177)
 
 
 
