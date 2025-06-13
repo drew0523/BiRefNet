@@ -29,7 +29,7 @@ pip install -r requirements.txt
 1. **Pre-requisites**: 커스텀 데이터셋을 다음의 경로에 저장: `${data_root_dir}/TASK_NAME/DATASET_NAME` 예시: `${data_root_dir}/custom/test_custom` 또는 `${data_root_dir}/General/train_custom` 그리고 각 dataset 폴더에는 `im` 와 `gt` 에 해당하는 데이터셋 폴더를 가져야 함. im: 이미지 / gt: 이미지에 대응되는 matting ground truth.
 
 > > #### 예시
-> > ![image](https://github.com/user-attachments/assets/f22b4c14-5a33-4c97-aeae-b40542b83e24)
+> > ![image](https://github.com/user-attachments/assets/7ba935b2-3e0c-42d4-b084-9acaa31b518e)
 
 > > 같은 폴더 내 im / gt 폴더에 대해서 파일명을 동일하게 하여 dataset을 넣어야 합니다.
 > > ![image](https://github.com/user-attachments/assets/2ab9420a-46d3-4a1c-8499-90bf23f44aeb)
