@@ -103,7 +103,7 @@ pip install -r requirements.txt
 > ```shell
 > pip install -q gdown onnx onnxscript onnxruntime-gpu==1.18.1
 > ```
-> 3. 이후 BiRefNet 폴더에 [export_onnx.py](https://drive.google.com/file/d/1Q3bwTxd687ofUphEmam0kRtBuiZSmhoI/view?usp=sharing) 파일을 업로드합니다.
+> 3. 이후 BiRefNet 폴더에 [export_onnx.py](https://drive.google.com/file/d/164BOBJvFgS5KtVoRiuGHxhuMe_bSOyIy/view?usp=sharing) 파일을 업로드합니다.
 > ![image](https://github.com/user-attachments/assets/f65fed09-efef-487a-af77-4524dec73653)
 
 > 4. 이후 현재 위치에서 다음을 실행합니다.
